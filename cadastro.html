@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Economizei</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./estilos.css" />
+  <script src="meus-gastos.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav style="display: flex; justify-content: space-around; width: 100%;">
+      <a href="index.html" type="button">
+        <img style="width: 15px; height: 15px;" src="assets/left-arrow.png">
+      </a>
+      <h1>Cadastro de Compra</h1>
+      <div>
+
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div style="width: 95%; padding-top: 10px;">
+      <form id="formulario" style="width: 100%;">
+        <div style="width: 100%; display: flex; flex-flow: column;">
+          <label>Descrição</label>
+          <input id="descricao" required type="text">
+        </div>
+
+        <div style="padding-top: 10px; width: 100%; display: flex; flex-flow: column;">
+          <label>Valor</label>
+          <input id="valor" required type="number" >
+        </div>
+
+        <div style="padding-top: 10px; width: 100%; display: flex; flex-flow: column;">
+          <label>Data</label>
+          <input id="data" required type="date" >
+        </div>
+
+        <div required style="padding-top: 10px; width: 100%; width: 100%; display: flex; flex-flow: column;">
+          <label>Tipo de gasto</label>
+          <select id="tipo-gasto" style="width: 100%;">
+            <option>Lanche</option>
+            <option>Saúde</option>
+            <option>Supermercado</option>
+            <option>Combustível</option>
+          </select>
+        </div>
+
+        <div style="width: 100%; display: flex; justify-content: center; padding-top: 10px;">
+          <button type="button" onclick="adicionar()"
+            style="width: 50%; background-color: #3ad0d0; display: flex; justify-content: center; padding: 10px; border-radius: 10px;">
+            <span>CADASTRAR</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Economizei</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="manifest" href="/manifest.webmanifest">
+</head>
+
+<body>
+  <header>
+    <h1>Gastos Mensais</h1>
+  </header>
+  <main>
+    <section id="mes">
+      <div style="display: flex; justify-content: space-around;">
+        <a type="button" onclick="calculaMesAnterior()">
+          <img style="width: 15px; height: 15px;" src="assets/left-arrow.png">
+        </a>
+         <div>
+          <input id="mes-ano-filtro" type="month" id="start" name="start" min="2020-01" max="2060-12" style="width: 100%;">
+        </div>
+        <a type="button" onclick="calculaMesPosterior()">
+          <img style="width: 15px; height: 15px;" src="assets/arrow-point-to-right.png">
+        </a>
+      </div>
+    </section>
+    <section id="gastos">
+    
+    </section>
+    <section id="nav-bar">
+      <div id="total" style="width: 100%; height: 100%; justify-content: center; align-items: center;
+      display: flex;">
+
+      </div>
+      <div id="adicionar" style="
+          position: fixed;
+          right: 1.5rem;
+          bottom: 1.5rem;
+          background: #3ad0d0;
+          border-radius: 50%;
+          padding: 10px;
+          box-shadow: 0px 0px 14px -5px black;
+          display: flex;
+          width: 40px;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+            ">
+        <a type="button" href="cadastro.html">
+          <img style="width: 30px; height: 30px;" src="assets/add.png">
+        </a>
+      </div>
+    </section>
+  </main>
+  <script src="meus-gastos.js"></script>
+</body>
+
+</html>
