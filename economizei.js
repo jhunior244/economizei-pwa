@@ -141,8 +141,7 @@ function calculaTotalMes(gastosFiltrada){
     let gastoTotal = document.createElement('span');
     gastoTotal.style.fontSize = '1.2rem';
     gastoTotal.style.width = '95%';
-    gastoTotal.textContent = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    console.log(total.toLocaleString('pt-BR'))
+    gastoTotal.textContent = 'Total: '+ total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     document.getElementById("total").appendChild(gastoTotal);
 }
 
