@@ -3,14 +3,14 @@ let gastos = [];
 onload = () => {
     aux = JSON.parse(localStorage.getItem('gastos'));
 
+    var dateObj = new Date();
+    var month = dateObj.getUTCMonth() + 1;
+    month = month > 9 ? month : '0' + month.toString();
+    var ano = dateObj.getFullYear();
+    document.getElementById("mes-ano-filtro").value = ano.toString() + '-' + month.toString();
     if (aux) {
         gastos = aux;
         if (window.location.pathname === "/index.html") {
-            var dateObj = new Date();
-            var month = dateObj.getUTCMonth() + 1;
-            month = month > 9 ? month : '0' + month.toString();
-            var ano = dateObj.getFullYear();
-            document.getElementById("mes-ano-filtro").value = ano.toString() + '-' + month.toString();
             filtraListaGastosMes();
         }
     }
