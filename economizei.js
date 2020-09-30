@@ -41,7 +41,8 @@ function adicionar() {
             valor: valor,
             ano: data.substring(0, 4),
             mes: data.substring(5, 7),
-            dia: data.substring(9, 11)
+            dia: data.substring(9, 11),
+            tipo: tipo
         });
         localStorage.setItem('gastos', JSON.stringify(gastos));
         document.getElementById("descricao").value = null;
@@ -76,17 +77,28 @@ function montaListaGastos(gastosFiltrada) {
     if (gastosFiltrada != null && gastosFiltrada.length > 0) {
         gastosFiltrada.forEach((gasto => {
             let cardGasto = document.createElement('div');
-            // cardGasto.value = gasto.id;
             cardGasto.style.display = 'flex';
             cardGasto.style.alignItems = 'center';
             cardGasto.style.marginBottom = '10px';
 
+            let iconeGasto = document.createElement('div');
+            iconeGasto.style.width = '13%';
+            iconeGasto.style.display = 'flex';
+            iconeGasto.style.alignItems = 'center';
+            iconeGasto.style.justifyContent = 'center';
+            iconeGasto.style.padding = '7px';
+
+            let imagemGasto = document.createElement('img');
+            imagemGasto = calculaImagemDeAcordoComTipoGasto(imagemGasto, gasto);
+            imagemGasto.style.width = '2.6rem';
+            iconeGasto.appendChild(imagemGasto);
+
             //div com descrição e valor
             let informacoesGasto = document.createElement('div');
-            informacoesGasto.style.width = '80%';
+            informacoesGasto.style.width = '60%';
             informacoesGasto.style.display = 'flex';
             informacoesGasto.style.flexFlow = 'column';
-            informacoesGasto.style.paddingLeft = '10px';
+            informacoesGasto.style.padding = '2px 0';
 
             let descricaGasto = document.createElement('span');
             descricaGasto.textContent = gasto.descricao;
@@ -128,6 +140,7 @@ function montaListaGastos(gastosFiltrada) {
             botaoExcluir.appendChild(iconeBotaoExcluir);
             excluir.appendChild(botaoExcluir);
 
+            cardGasto.appendChild(iconeGasto);
             cardGasto.appendChild(informacoesGasto);
             cardGasto.appendChild(excluir);
 
@@ -136,6 +149,25 @@ function montaListaGastos(gastosFiltrada) {
             i++;
         }));
     }
+}
+
+function calculaImagemDeAcordoComTipoGasto(imagemGasto, gasto){
+    if(gasto == null){
+        return;
+    }
+
+    if(gasto.tipo === 'Lanche'){
+        imagemGasto.src = '/assets/lanche.png';
+    } else if(gasto.tipo === 'Saúde'){
+        imagemGasto.src = '/assets/saude.png';
+    } else if(gasto.tipo === 'Supermercado'){
+        imagemGasto.src = '/assets/supermercado.png';
+    } else if(gasto.tipo === 'Combustível'){
+        imagemGasto.src = '/assets/combustivel.png';
+    } else {
+        imagemGasto.src = '/assets/outros.png';
+    }
+    return imagemGasto;
 }
 
 //recebe uma lista de gasto, soma todos esses gastos e cria o HTML que exibirá esse total na tela principal
