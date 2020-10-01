@@ -24,7 +24,7 @@ Nesta outra tela, o usuário pode cadastrar suas despesas
 
 ## 2. Dados do usuário
 Nesta aplicação, os dados do usuário que são armazenados são uma lista de objetos, 
-onde cada objeto possui uma id (no padrão UUID), uma descricao, uma data e o tipo do gasto (lanche, saúde e etc)
+onde cada objeto possui uma id (no padrão UUID), uma descricao, valor, uma data e o tipo do gasto (lanche, saúde e etc)
 
 ## 2. Dados do usuário
 Nesta aplicação, os dados do usuário que são armazenados são uma lista de objetos, 
