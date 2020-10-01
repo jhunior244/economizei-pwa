@@ -9,14 +9,17 @@ O objetivo desta aplicação é prover ao usuário um controle dos seus gastos m
 ## 1. Interfaces
 
 ### Imagem do wireframe apenas para comparação com o resultado final
+
 ![Wireframe](https://github.com/jhunior244/economizei-pwa/blob/master/assets/wireframe.jpg?raw=true)
 
 ### Tela principal
 Essa tela exibe os gastos do usuário a cada mês, exibindo Descrição e valor e também um total de todos itens no mês
+
 ![Tela Principal](https://github.com/jhunior244/economizei-pwa/blob/master/assets/tela1.PNG?raw=true)
 
 ### Tela de cadastro de gasto
 Nesta outra tela, o usuário pode cadastrar suas despesas
+
 ![Tela de cadastro](https://github.com/jhunior244/economizei-pwa/blob/master/assets/tela2.PNG?raw=true)
 
 ## 2. Dados do usuário
