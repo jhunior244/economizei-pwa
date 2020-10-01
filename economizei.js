@@ -172,7 +172,6 @@ function calculaImagemDeAcordoComTipoGasto(imagemGasto, gasto){
 
 //recebe uma lista de gasto, soma todos esses gastos e cria o HTML que exibirá esse total na tela principal
 function calculaTotalMes(gastosFiltrada) {
-    console.log('passou');
     document.getElementById("total").innerHTML = '';
     let total = 0;
     if (gastosFiltrada != null && gastosFiltrada.length > 0) {
@@ -190,7 +189,6 @@ function calculaTotalMes(gastosFiltrada) {
 //função chamada pela seta de navegação entre meses (volta um mes a cada clique)
 function calculaMesAnterior() {
     let mes = Number.parseInt(document.getElementById("mes-ano-filtro").value.toString().substring(5, 7));
-
     let ano = Number.parseInt(document.getElementById("mes-ano-filtro").value.toString().substring(0, 4));
     if (mes === 1) {
         mes = 12;
