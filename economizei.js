@@ -151,6 +151,7 @@ function montaListaGastos(gastosFiltrada) {
     }
 }
 
+//coloca icone no card de acordo com tipo de gasto
 function calculaImagemDeAcordoComTipoGasto(imagemGasto, gasto){
     if(gasto == null){
         return;
